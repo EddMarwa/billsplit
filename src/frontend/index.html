@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitting System</title>
+</head>
+<body>
+    <h1>Bill Splitting System</h1>
+    <form id="billForm">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <label for="splitType">Split Type:</label>
+        <select id="splitType" name="splitType">
+            <option value="equal">Equal</option>
+            <option value="specific">Specific Shares</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
