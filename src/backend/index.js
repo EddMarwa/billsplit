@@ -16,6 +16,16 @@ app.get('/', (req, res) => {
     res.send('Bill Splitting System Backend');
 });
 
+// Example endpoint to get the latest block number
+app.get('/blockNumber', async (req, res) => {
+    try {
+        const blockNumber = await web3.eth.getBlockNumber();
+        res.json({ blockNumber });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
